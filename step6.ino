@@ -48,6 +48,7 @@
    void helper() {
       int helperLocal = 1600;
       static int helperStatic = 40;
+      // save some local addresses to refer to later
       addr = &helperLocal;
       addrStatic = &helperStatic;
       Serial.println("**INSIDE HELPER**");
