@@ -42,7 +42,7 @@ void setup() {
  */
 void ourISR() {
    static int timesPushed = 0; // static means value persists between function calls
-   Serial.println(timesPushed++);
+   Serial.println(++timesPushed);
 
    // TODO: Clear the pending interrupt flag (Foundation Q4.8) on the MCU side
    R_ICU->IELSR_b[CPU_INT].___ = ;
