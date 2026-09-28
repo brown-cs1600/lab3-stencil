@@ -41,8 +41,8 @@ void setup() {
  * Callback for button push
  */
 void ourISR() {
-   static int timesPushed = 0; // static means value persists between function calls
-   Serial.println(++timesPushed);
+   static int timesPushed = 1; // static means value persists between function calls
+   Serial.println(timesPushed++);
 
    // TODO: Clear the pending interrupt flag (Foundation Q4.8) on the MCU side
    R_ICU->IELSR_b[CPU_INT].___ = ;
